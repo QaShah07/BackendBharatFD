@@ -1,5 +1,5 @@
 """
-ASGI config for faq_project project.
+ASGI config for backendBharatFD project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backendBhartFD.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backendBharatFD.settings')
 
 application = get_asgi_application()
