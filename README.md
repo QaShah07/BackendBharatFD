@@ -27,10 +27,31 @@ To get started with this project, you will need to have the following installed 
 - **Python 3.12**
 - **Git**
 - **Redis Server** (for Caching)
+  
+---
+
+## CKEditor 5 Integration
+
+The project uses **CKEditor 5** for rich text formatting in FAQ answers.
+
+### Steps to Set Up CKEditor 5:
+1. **Install the required dependencies for CKEditor 5**.
+    ```bash
+    pip install django-ckeditor-5
+    ```
+
+2. **Add ckeditor` to your `INSTALLED_APPS` in `settings.py**:
+    ```python
+    INSTALLED_APPS = [
+        ...
+        'django_ckeditor_5',
+        ...
+    ]
+    ```
 
 --- 
 
-## backed setup on local machine
+## Backend setup on local machine
 ### Steps to Set Up
 1. **Clone the Repository**:
     ```bash
@@ -97,26 +118,6 @@ CACHES = {
 ---
 
 
-## CKEditor 5 Integration
-
-The project uses **CKEditor 5** for rich text formatting in FAQ answers.
-
-### Steps to Set Up CKEditor 5:
-1. **Install the required dependencies for CKEditor 5**.
-    ```bash
-    pip install django-ckeditor-5
-    ```
-
-2. **Add ckeditor` to your `INSTALLED_APPS` in `settings.py**:
-    ```python
-    INSTALLED_APPS = [
-        ...
-        'django_ckeditor_5',
-        ...
-    ]
-    ```
-
-   ---
    
 ## Use Docker to Set Up the Project
 
