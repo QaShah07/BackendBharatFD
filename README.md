@@ -19,7 +19,7 @@ This FAQ Management Systemis built with Django and provides seamless multilingua
 ---
 
 ### Demo - Video (YouTube)
-
+[Watch the video on YouTube](https://youtu.be/MA64JPtS4d0?si=w3zVmWrD8mCJ52i2)
 ---
 
 ### Getting Started
