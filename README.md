@@ -109,6 +109,27 @@ The project uses **CKEditor 5** for rich text formatting in FAQ answers.
 ## Use Docker to Set Up the Project
 
 ---
+### **Setup Instructions**
+1. **Clone the repository**  
+   ```sh
+   git clone <your-github-repo-url>
+   cd <your-project-folder>
+   ```
+
+2. **Build Docker images**  
+   ```sh
+   docker-compose build
+   ```
+
+3. **Start the containers**  
+   ```sh
+   docker-compose up 
+   ```
+
+4. **Verify running containers**  
+   ```sh
+   docker ps
+   ```
 
 ## API Usage
 
@@ -121,12 +142,12 @@ You can retrieve FAQs in different languages using the following API endpoints:
 
 - **Hindi**:  
   ```bash
-  curl http://127.0.0.1:8000/api/faqs/?lang=hi
+  curl http://127.0.0.1:8000/api/faqs/{id}/?lang=hi
   ```
 
 - **Bengali**:  
   ```bash
-  curl http://127.0.0.1:8000/api/faqs/?lang=bn
+  curl http://127.0.0.1:8000/api/faqs/{id}/?lang=bn
 
   ```
   ### Example Response:

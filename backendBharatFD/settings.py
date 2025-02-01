@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-jpq3vvw925$-)(uz4xdj!7$tu&riuiqtntxx)yo4x2glosr2y+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -134,10 +135,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',
+        # 'LOCATION': 'redis://host.docker.internal:6379/1',  # to run on docker
+        'LOCATION': 'redis://127.0.0.1:6379/1' ,   # to run host machine
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        }
+        },
     }
 }
 
