@@ -72,13 +72,25 @@ To get started with this project, you will need to have the following installed 
     ```bash
     python manage.py createsuperuser
     ```
-
-8. **Start the Server**:
+8. **change the settings.py**
+```
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://host.docker.internal:6379/1',  # to run on docker
+        # 'LOCATION': 'redis://127.0.0.1:6379/1' ,   # to run host machine
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        },
+    }
+}
+```
+9. **Start the Server**:
     ```bash
     python manage.py runserver
     ```
 
-9. **Access the Application**:  
+10. **Access the Application**:  
     Open your browser and go to:  
     [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
@@ -115,18 +127,30 @@ The project uses **CKEditor 5** for rich text formatting in FAQ answers.
    git clone <your-github-repo-url>
    cd <your-project-folder>
    ```
-
-2. **Build Docker images**  
+2. **change the settings.py**
+```
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://host.docker.internal:6379/1',  # to run on docker
+        # 'LOCATION': 'redis://127.0.0.1:6379/1' ,   # to run host machine
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        },
+    }
+}
+```
+3. **Build Docker images**  
    ```sh
    docker-compose build
    ```
 
-3. **Start the containers**  
+4. **Start the containers**  
    ```sh
    docker-compose up 
    ```
 
-4. **Verify running containers**  
+5. **Verify running containers**  
    ```sh
    docker ps
    ```
