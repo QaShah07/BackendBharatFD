@@ -24,3 +24,10 @@ class FAQListCreateView(generics.ListCreateAPIView):
         response = super().list(request, *args, **kwargs)
         cache.set(cache_key, response.data, timeout=3600)  # Cache for 1 hour
         return response
+
+class FAQRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FAQ.objects.all()
+    serializer_class = FAQSerializer
+
+    def get_serializer_context(self):
+        return {'request': self.request}  # Pass request for language selection
