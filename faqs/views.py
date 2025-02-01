@@ -31,3 +31,8 @@ class FAQRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_serializer_context(self):
         return {'request': self.request}  # Pass request for language selection
+    
+class ClearCacheView(APIView):
+    def post(self, request):
+        cache.clear()
+        return Response({'message': 'Cache cleared successfully'})
