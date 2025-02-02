@@ -74,9 +74,9 @@ echo "Password: password"
 ```
 
 **Deployment Details**
-
+```
 echo "The FAQ API has been deployed on AWS. Update credentials after login."
-
+```
 ---
 
 ### Demo - Video (YouTube)
