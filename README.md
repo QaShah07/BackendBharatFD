@@ -16,6 +16,67 @@ This FAQ Management Systemis built with Django and provides seamless multilingua
 
 ### Deploy Link
 
+### Retrieve FAQs in different languages:
+ 
+**English (Default)**
+```
+http://65.0.179.163:8000/api/faqs/
+```
+
+**Hindi**
+```
+http://65.0.179.163:8000/api/faqs/{id}/?lang=hi
+```
+
+**Bengali**
+```
+http://65.0.179.163:8000/api/faqs/{id}/?lang=bn
+```
+
+### Example ID Usage
+
+**Fetch FAQ in Hindi (hi)**
+```
+http://65.0.179.163:8000/api/faqs/1/?lang=hi  # Fetch question & answer for ID 1 in Hindi
+
+```
+
+**Fetch FAQ in Bengali (bn)**
+```
+http://65.0.179.163:8000/api/faqs/2/?lang=bn  # Fetch question & answer for ID 2 in Bengali
+```
+
+### Example Response
+```
+HTTP 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+{
+    "id": 1,
+    "question": "हैलो, मैं एक परियोजना बनाने की कोशिश कर रहा हूं",
+    "answer": "मुझे लगता है कि यह काम करता है"
+}
+```
+
+### Admin Panel  
+
+**Access the Admin Panel:**
+```
+echo "Visit: http://65.0.179.163:8000/admin/login/?next=/admin/"
+```
+
+**Login Credentials:**
+```
+echo "Username: admin"
+echo "Password: password"
+```
+
+**Deployment Details**
+
+echo "The FAQ API has been deployed on AWS. Update credentials after login."
+
 ---
 
 ### Demo - Video (YouTube)
