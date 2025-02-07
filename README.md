@@ -64,7 +64,7 @@ Vary: Accept
 
 **Access the Admin Panel:**
 ```
-echo "Visit: http://65.0.179.163:8000/admin/login/?next=/admin/"
+http://65.0.179.163:8000/admin/
 ```
 
 **Login Credentials:**
